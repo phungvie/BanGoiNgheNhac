@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "94733646-d947-4bc9-928e-486e8093d3e5",
-		"name": "bookteria",
+		"_postman_id": "9c72adc6-85e6-4a8e-9b0d-0f8fb64bfc6d",
+		"name": "postmanViet",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "16988973"
+		"_exporter_id": "29877640"
 	},
 	"item": [
 		{
@@ -82,7 +82,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMDk2MDAxMywiaWF0IjoxNzIwOTU2NDEzLCJqdGkiOiI0MTVkOTVlNS1jMDBmLTQ4MGItOGQzZi01MDQwNTYwMzM1YmUiLCJzY29wZSI6IlJPTEVfQURNSU4ifQ.3l0QhYn8tQspeXMwUbMz6YB_E35AN9xsZkQehe-H0Yy6WF2PHqr5WgNLBRMldj2bPk81_gWFdhY78uoWto4Xnw",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiI5ZDgwNzA5Yy03NWJlLTQ4ODItYWJmMi0zZTg4Zjk3OTE5MjEiLCJleHAiOjE3MjkwODE1MjcsImlhdCI6MTcyOTA3NzkyNywianRpIjoiY2RkOTU2MDgtYzdlMC00OWM2LWExZjQtMDY3MzljMjM3OGI3Iiwic2NvcGUiOiJST0xFX0FETUlOIn0.soup1Za-giTeFsqQH2KoohPWtgQRHG4FMhFENj-M7_gwUoquGZcz6zLqbwsc5ovTk52xQXod_lUcIHtslr58UQ",
 									"type": "string"
 								}
 							]
@@ -121,7 +121,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"john123\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"john123@yopmail.com\",\r\n    \"firstName\": \"Jame4\",\r\n    \"lastName\": \"Bond\",\r\n    \"dob\": \"2000-04-08\",\r\n    \"city\" : \"London\"\r\n}",
+							"raw": "{\r\n    \"username\": \"john2\",\r\n    \"password\": \"12345\",\r\n    \"email\": \"john123@yopmail.com\",\r\n    \"firstName\": \"Jame4\",\r\n    \"lastName\": \"Bond\",\r\n    \"dob\": \"2000-04-08\",\r\n    \"city\" : \"London\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -375,7 +375,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiJqYW1lMTAiLCJleHAiOjE3MTU2MDg5OTMsImlhdCI6MTcxNTYwNTM5MywianRpIjoiNzhiNjEwOWMtNGIxMi00Y2M0LTk0ZDUtNjU5NzY1NzU1NjE2Iiwic2NvcGUiOiJST0xFX1VTRVIifQ.arF3S5eAS1hayQqnuAoJQNlIBevk7H8YmBGWdQW9MDBEFzzS7b1aTWIEVMk7YToz9BaMBURO0DNn6Tkvaf8Tuw",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiI5ZDgwNzA5Yy03NWJlLTQ4ODItYWJmMi0zZTg4Zjk3OTE5MjEiLCJleHAiOjE3MjkwODE1MjcsImlhdCI6MTcyOTA3NzkyNywianRpIjoiY2RkOTU2MDgtYzdlMC00OWM2LWExZjQtMDY3MzljMjM3OGI3Iiwic2NvcGUiOiJST0xFX0FETUlOIn0.soup1Za-giTeFsqQH2KoohPWtgQRHG4FMhFENj-M7_gwUoquGZcz6zLqbwsc5ovTk52xQXod_lUcIHtslr58UQ",
 									"type": "string"
 								}
 							]
@@ -886,7 +886,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiIyNzYzNjRmNC1jODliLTQzNGEtODk4Zi1lM2U2MDNjYzIyYTkiLCJleHAiOjE3MjMzNzAwNzgsImlhdCI6MTcyMzM2NjQ3OCwianRpIjoiZDRkZmNiZjEtZTVmNi00NDdjLWJiMTktYzg2OTZkMjhhMTM3Iiwic2NvcGUiOiJST0xFX1VTRVIifQ.BXtwa_LJMhNn2LIun8kNZQFt8z-i8khl8nRAgS7C5h-m7WmK5nI-lcXDgCsmjLYLO-QPHZLb7VrKYzK5N1RZQw",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiJkNTE3YmY0MC04N2ZlLTQ3YjktOGY3OC05NjczYTBiZDJmYjAiLCJleHAiOjE3Mjk1MTU3NzcsImlhdCI6MTcyOTUxMjE3NywianRpIjoiZTZiOWFmMTgtNzRjOS00YjAwLTgyMWEtMzY4YjRiZmUzYjE5Iiwic2NvcGUiOiJST0xFX1VTRVIifQ.Gg2e8pbsakCwGUw3Newzg6h4syO5aIdtKQuge7OGVPmub-51aH6NN-lrICcjVz53xS2hhgnTQZviLne5GJsc2A",
 									"type": "string"
 								}
 							]
@@ -927,7 +927,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiIyNzYzNjRmNC1jODliLTQzNGEtODk4Zi1lM2U2MDNjYzIyYTkiLCJleHAiOjE3MjMzNzAwNzgsImlhdCI6MTcyMzM2NjQ3OCwianRpIjoiZDRkZmNiZjEtZTVmNi00NDdjLWJiMTktYzg2OTZkMjhhMTM3Iiwic2NvcGUiOiJST0xFX1VTRVIifQ.BXtwa_LJMhNn2LIun8kNZQFt8z-i8khl8nRAgS7C5h-m7WmK5nI-lcXDgCsmjLYLO-QPHZLb7VrKYzK5N1RZQw",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiI5ZDgwNzA5Yy03NWJlLTQ4ODItYWJmMi0zZTg4Zjk3OTE5MjEiLCJleHAiOjE3MjkwODE1MjcsImlhdCI6MTcyOTA3NzkyNywianRpIjoiY2RkOTU2MDgtYzdlMC00OWM2LWExZjQtMDY3MzljMjM3OGI3Iiwic2NvcGUiOiJST0xFX0FETUlOIn0.soup1Za-giTeFsqQH2KoohPWtgQRHG4FMhFENj-M7_gwUoquGZcz6zLqbwsc5ovTk52xQXod_lUcIHtslr58UQ",
 									"type": "string"
 								}
 							]
@@ -946,6 +946,198 @@
 								"v1",
 								"post",
 								"my-posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MusicService",
+			"item": [
+				{
+					"name": "Get all song",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiJlY2I1NmI1Yy1mZTI1LTQ0NDctOWI1Yy1hMjdiNDk3MzFhYjYiLCJleHAiOjE3Mjk1MTMyMTEsImlhdCI6MTcyOTUwOTYxMSwianRpIjoiMDM4ZWJiMmItNDM5Ni00YmIzLTllNDgtYTY1YzFmMmRjMDcxIiwic2NvcGUiOiJST0xFX0FETUlOIn0.dsdpEiV-lrLWaCBSCTr64EJE-hoCBHxUeaFw6RNY_MypwxR9QDv4GNmO3vWMTnetL8W1GdcICz0ym4NeRR02nQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/music/songs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"music",
+								"songs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get song",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiJlY2I1NmI1Yy1mZTI1LTQ0NDctOWI1Yy1hMjdiNDk3MzFhYjYiLCJleHAiOjE3Mjk1MTc1OTUsImlhdCI6MTcyOTUxMzk5NSwianRpIjoiODZkODMyNTUtNWNiNy00NTFhLTk3NGMtMDMzM2E3MGI4M2IwIiwic2NvcGUiOiJST0xFX0FETUlOIn0.znMJ0N-DNcJ0lEGqOdM2veOx9KHoujUdnb7iLvKV0b_IcM0D47DFp26i3pfHz5FLe8D1NoNhh6H84SK6MKsPlQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/music/songs/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"music",
+								"songs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get song all by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiJlY2I1NmI1Yy1mZTI1LTQ0NDctOWI1Yy1hMjdiNDk3MzFhYjYiLCJleHAiOjE3Mjk1MTk3OTksImlhdCI6MTcyOTUxNjE5OSwianRpIjoiY2EyZmY5MGEtMjc0Yi00MjkxLWEyMjMtNWNiMTA2OTQ4ODVlIiwic2NvcGUiOiJST0xFX0FETUlOIn0.D9Qhk3ybISPbNK9SvncuPCUBOjqsOH6a2O76eJjHa0hAVSjxH65E--PgyR2hBG-iyGiDy1D5AO5bUokuV3P0LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\"1\",\"2\"]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/api/v1/music/songs/ids",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"music",
+								"songs",
+								"ids"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add song",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiJlY2I1NmI1Yy1mZTI1LTQ0NDctOWI1Yy1hMjdiNDk3MzFhYjYiLCJleHAiOjE3Mjk1MTk3OTksImlhdCI6MTcyOTUxNjE5OSwianRpIjoiY2EyZmY5MGEtMjc0Yi00MjkxLWEyMjMtNWNiMTA2OTQ4ODVlIiwic2NvcGUiOiJST0xFX0FETUlOIn0.D9Qhk3ybISPbNK9SvncuPCUBOjqsOH6a2O76eJjHa0hAVSjxH65E--PgyR2hBG-iyGiDy1D5AO5bUokuV3P0LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\"1\",\"2\",\"3\"]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/api/v1/music/playlists/addSongs/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"music",
+								"playlists",
+								"addSongs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllSongsInPlaylist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXZ0ZXJpYS5jb20iLCJzdWIiOiJlY2I1NmI1Yy1mZTI1LTQ0NDctOWI1Yy1hMjdiNDk3MzFhYjYiLCJleHAiOjE3Mjk1MTk3OTksImlhdCI6MTcyOTUxNjE5OSwianRpIjoiY2EyZmY5MGEtMjc0Yi00MjkxLWEyMjMtNWNiMTA2OTQ4ODVlIiwic2NvcGUiOiJST0xFX0FETUlOIn0.D9Qhk3ybISPbNK9SvncuPCUBOjqsOH6a2O76eJjHa0hAVSjxH65E--PgyR2hBG-iyGiDy1D5AO5bUokuV3P0LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/music/playlists/getAllSongs/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"music",
+								"playlists",
+								"getAllSongs",
+								"2"
 							]
 						}
 					},
