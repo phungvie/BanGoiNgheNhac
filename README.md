@@ -1,5 +1,5 @@
-# bookteria
-The bookteria project, a book social network
+# nhac
+
 
 # Install Kafka
 `docker-compose up -d`

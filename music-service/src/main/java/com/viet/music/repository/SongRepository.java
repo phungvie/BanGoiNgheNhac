@@ -9,6 +9,7 @@ import com.viet.music.entity.Song;
 
 @Repository
 public interface SongRepository extends MongoRepository<Song, String>{
-	Optional<Song> findByName(String Name);
+	Optional<Song> findByName(String name);
+	
 	boolean existsByName(String name);
 }

@@ -12,11 +12,10 @@ public enum ErrorCode {
     RONG_HOAC_NULL(1102, "Có cái gì đó rỗng hoặc null -_-", HttpStatus.BAD_REQUEST),
     BAI_HAT_DA_TON_TAI(1103, "Bài hát đã tồn tại", HttpStatus.CONFLICT),
     KHONG_TON_TAI_PLAYLIST(1104, "Không tìm thấy Playlist", HttpStatus.NOT_FOUND),
-    KHONG_TON_TAI_BAI_HAT(1105, "Không tìm thấy bài hát", HttpStatus.NOT_FOUND),
+    KHONG_TON_TAI_BAI_HAT(1105, "Không tìm thấy bài hát nào", HttpStatus.NOT_FOUND),
     UNAUTHENTICATED(1106, "Unauthenticated", HttpStatus.UNAUTHORIZED),
     UNAUTHORIZED(1107, "You do not have permission", HttpStatus.FORBIDDEN),
-    
-    
+    LOI_KHONG_LUU_DUOC(1108, "Lưu dữ liệu thất bại", HttpStatus.BAD_REQUEST),
     
     ;
 

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.viet.music.dto.response.SongResponse;
 import com.viet.music.entity.Playlist;
+import com.viet.music.entity.Song;
 import com.viet.music.exception.AppException;
 import com.viet.music.exception.ErrorCode;
 import com.viet.music.repository.PlaylistRepository;
@@ -33,8 +34,18 @@ public class PlaylistService {
 		return songService.getSongAllById(SongIDs);
 	}
 
-	public List<SongResponse> addSongs(List<String> id) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<SongResponse> addSongs(String playlistId,List<String> id) {
+		Playlist playlist=playlistRepository
+				.findById(playlistId)
+				.orElseThrow(
+						() -> new AppException(ErrorCode.KHONG_TON_TAI_PLAYLIST
+								));
+		playlist.setSongIDs(id);
+		try {
+			playlist=playlistRepository.save(playlist);
+		} catch (Exception e) {
+			throw  new AppException(ErrorCode.LOI_KHONG_LUU_DUOC) ;
+		}
+		return GetAllSongsInPlaylist(playlist.getId());
 	}
 }

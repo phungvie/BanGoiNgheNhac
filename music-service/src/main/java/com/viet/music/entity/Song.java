@@ -21,7 +21,7 @@ import lombok.experimental.FieldDefaults;
 public class Song {
 	@MongoId
 	String id;
-	 @Indexed(unique = true)
+	@Indexed(unique = true)
 	String name;
 	String title;
 	String album;

@@ -33,7 +33,10 @@ public class SongService {
     
     @PreAuthorize("hasRole('ADMIN')")
 	public SongResponse getSong(String id){
-		return  mapper.toSongResponse(songRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.KHONG_TON_TAI_BAI_HAT)));
+		return  songRepository
+				.findById(id)
+				.map(t -> mapper.toSongResponse(t))
+				.orElseThrow(() -> new AppException(ErrorCode.KHONG_TON_TAI_BAI_HAT));
 	}
     
     @PreAuthorize("hasRole('ADMIN')")
@@ -56,8 +59,11 @@ public class SongService {
 	    if (id == null || id.isEmpty()) {
 	    	throw new AppException(ErrorCode.RONG_HOAC_NULL);
 	    }
-		
-		return songRepository.findAllById(id).stream().map(t -> mapper.toSongResponse(t)).toList();
+	    List<SongResponse> viet= songRepository.findAllById(id).stream().map(t -> mapper.toSongResponse(t)).toList();
+	    if(viet.isEmpty()) {
+	    	throw new AppException(ErrorCode.KHONG_TON_TAI_BAI_HAT);
+	    }else
+		return viet;
 
 	}
 }

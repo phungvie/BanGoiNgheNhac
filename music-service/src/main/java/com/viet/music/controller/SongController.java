@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class SongController {
 	SongService songService;
 
-	@GetMapping("/")
+	@GetMapping
 	public ApiResponse<List<SongResponse>> getAllSong() {
 		return ApiResponse.<List<SongResponse>>builder()
 				.result(songService.getAllSong())
@@ -43,7 +43,7 @@ public class SongController {
 				.build();
 	}
 	@GetMapping("/ids")
-	public ApiResponse<List<SongResponse>> getSongAllById(List<String> id) {
+	public ApiResponse<List<SongResponse>> getSongAllById(@RequestBody List<String> id) {
 		return ApiResponse.<List<SongResponse>>builder()
 				.result(songService.getSongAllById(id))
 				.build();
