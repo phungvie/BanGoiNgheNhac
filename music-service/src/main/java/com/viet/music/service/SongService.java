@@ -26,12 +26,12 @@ public class SongService {
 	SongMapper mapper;
 	SongRepository songRepository;
 	
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
 	public List<SongResponse> getAllSong(){
 		return  songRepository.findAll().stream().map(t -> mapper.toSongResponse(t)).toList();
 	}
     
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
 	public SongResponse getSong(String id){
 		return  songRepository
 				.findById(id)
@@ -39,7 +39,7 @@ public class SongService {
 				.orElseThrow(() -> new AppException(ErrorCode.KHONG_TON_TAI_BAI_HAT));
 	}
     
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
     public void deleteSong(String songId) {
         songRepository.deleteById(songId);
     }

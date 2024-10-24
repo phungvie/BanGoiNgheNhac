@@ -1,7 +1,12 @@
 package com.viet.music.service;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 
@@ -40,12 +45,19 @@ public class PlaylistService {
 				.orElseThrow(
 						() -> new AppException(ErrorCode.KHONG_TON_TAI_PLAYLIST
 								));
-		playlist.setSongIDs(id);
-		try {
-			playlist=playlistRepository.save(playlist);
-		} catch (Exception e) {
-			throw  new AppException(ErrorCode.LOI_KHONG_LUU_DUOC) ;
+		
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String userId = authentication.getName();
+        
+        if(userId==playlist.getUserID()) {
+    		Set<String> vietSet=new HashSet<>(playlist.getSongIDs());
+    		vietSet.addAll(id);
+    		playlist.setSongIDs(new ArrayList<>(vietSet));
+    		playlist=playlistRepository.save(playlist);
+    		return GetAllSongsInPlaylist(playlistId);
+        }else {
+			throw new AppException(ErrorCode.PLAYLIST_KHONG_PHAI_CUU_CUA_BAN);
 		}
-		return GetAllSongsInPlaylist(playlist.getId());
-	}
+        
+	}        
 }

@@ -3,6 +3,7 @@ package com.devteria.identity.service;
 import java.util.HashSet;
 import java.util.List;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import com.devteria.identity.dto.request.RoleRequest;
@@ -25,6 +26,7 @@ public class RoleService {
     PermissionRepository permissionRepository;
     RoleMapper roleMapper;
 
+    @PreAuthorize("hasRole('ROLE_Admin')")
     public RoleResponse create(RoleRequest request) {
         var role = roleMapper.toRole(request);
 
@@ -35,10 +37,12 @@ public class RoleService {
         return roleMapper.toRoleResponse(role);
     }
 
+    @PreAuthorize("hasRole('ROLE_Admin')")
     public List<RoleResponse> getAll() {
         return roleRepository.findAll().stream().map(roleMapper::toRoleResponse).toList();
     }
 
+    @PreAuthorize("hasRole('ROLE_Admin')")
     public void delete(String role) {
         roleRepository.deleteById(role);
     }

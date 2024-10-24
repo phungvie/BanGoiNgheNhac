@@ -49,93 +49,94 @@ public class ApplicationInitConfig {
             UserRepository userRepository,
             RoleRepository roleRepository) {
         return args -> {
-            if (userRepository.findByUsername(ADMIN_USER_NAME).isEmpty()) {}
-            permissionService.create(PermissionRequest.builder()
-                    .name("listen_free_music")
-                    .description("Listen to free music")
-                    .build());
-            permissionService.create(PermissionRequest.builder()
-                    .name("listen_premium_music")
-                    .description("Listen to premium music")
-                    .build());
+            if (userRepository.findByUsername(ADMIN_USER_NAME).isEmpty()) {
+                permissionService.create(PermissionRequest.builder()
+                        .name("listen_free_music")
+                        .description("Listen to free music")
+                        .build());
+                permissionService.create(PermissionRequest.builder()
+                        .name("listen_premium_music")
+                        .description("Listen to premium music")
+                        .build());
 
-            permissionService.create(PermissionRequest.builder()
-                    .name("upload_music")
-                    .description("Upload new music to the system")
-                    .build());
+                permissionService.create(PermissionRequest.builder()
+                        .name("upload_music")
+                        .description("Upload new music to the system")
+                        .build());
 
-            permissionService.create(PermissionRequest.builder()
-                    .name("manage_own_music")
-                    .description("Manage the music uploaded by the user")
-                    .build());
+                permissionService.create(PermissionRequest.builder()
+                        .name("manage_own_music")
+                        .description("Manage the music uploaded by the user")
+                        .build());
 
-            permissionService.create(PermissionRequest.builder()
-                    .name("view_statistics")
-                    .description("View listening statistics")
-                    .build());
+                permissionService.create(PermissionRequest.builder()
+                        .name("view_statistics")
+                        .description("View listening statistics")
+                        .build());
 
-            permissionService.create(PermissionRequest.builder()
-                    .name("manage_users")
-                    .description("Manage users (add, edit, delete, suspend)")
-                    .build());
+                permissionService.create(PermissionRequest.builder()
+                        .name("manage_users")
+                        .description("Manage users (add, edit, delete, suspend)")
+                        .build());
 
-            permissionService.create(PermissionRequest.builder()
-                    .name("manage_all_music")
-                    .description("Manage all music in the system")
-                    .build());
+                permissionService.create(PermissionRequest.builder()
+                        .name("manage_all_music")
+                        .description("Manage all music in the system")
+                        .build());
 
-            permissionService.create(PermissionRequest.builder()
-                    .name("manage_subscriptions")
-                    .description("Manage user subscription plans")
-                    .build());
+                permissionService.create(PermissionRequest.builder()
+                        .name("manage_subscriptions")
+                        .description("Manage user subscription plans")
+                        .build());
 
-            roleService.create(RoleRequest.builder()
-                    .name("Guest")
-                    .description("Users with access to free music only")
-                    .permissions(Set.of("listen_free_music"))
-                    .build());
+                roleService.create(RoleRequest.builder()
+                        .name("GUEST")
+                        .description("Users with access to free music only")
+                        .permissions(Set.of("listen_free_music"))
+                        .build());
 
-            roleService.create(RoleRequest.builder()
-                    .name("Subscriber")
-                    .description("Users with access to premium and free music")
-                    .permissions(Set.of("listen_free_music", "listen_premium_music"))
-                    .build());
+                roleService.create(RoleRequest.builder()
+                        .name("SUBSCRIBER")
+                        .description("Users with access to premium and free music")
+                        .permissions(Set.of("listen_free_music", "listen_premium_music"))
+                        .build());
 
-            roleService.create(RoleRequest.builder()
-                    .name("Artist")
-                    .description("Artists who can upload and manage their own music")
-                    .permissions(Set.of(
-                            "listen_free_music",
-                            "listen_premium_music",
-                            "upload_music",
-                            "manage_own_music",
-                            "view_statistics"))
-                    .build());
+                roleService.create(RoleRequest.builder()
+                        .name("ARTIST")
+                        .description("Artists who can upload and manage their own music")
+                        .permissions(Set.of(
+                                "listen_free_music",
+                                "listen_premium_music",
+                                "upload_music",
+                                "manage_own_music",
+                                "view_statistics"))
+                        .build());
 
-            roleService.create(RoleRequest.builder()
-                    .name("Admin")
-                    .description("Administrators with full access to the system")
-                    .permissions(Set.of(
-                            "listen_free_music",
-                            "listen_premium_music",
-                            "upload_music",
-                            "manage_own_music",
-                            "view_statistics",
-                            "manage_users",
-                            "manage_all_music",
-                            "manage_subscriptions"))
-                    .build());
+                roleService.create(RoleRequest.builder()
+                        .name("ADMIN")
+                        .description("Administrators with full access to the system")
+                        .permissions(Set.of(
+                                "listen_free_music",
+                                "listen_premium_music",
+                                "upload_music",
+                                "manage_own_music",
+                                "view_statistics",
+                                "manage_users",
+                                "manage_all_music",
+                                "manage_subscriptions"))
+                        .build());
 
-            User user = User.builder()
-                    .username(ADMIN_USER_NAME)
-                    .emailVerified(true)
-                    .password(passwordEncoder.encode(ADMIN_PASSWORD))
-                    .roles(Set.of(roleRepository
-                            .findById("Admin")
-                            .orElseThrow(() -> new AppException(ErrorCode.ROLE_NOT_EXISTED))))
-                    .build();
+                User user = User.builder()
+                        .username(ADMIN_USER_NAME)
+                        .emailVerified(true)
+                        .password(passwordEncoder.encode(ADMIN_PASSWORD))
+                        .roles(Set.of(roleRepository
+                                .findById("Admin")
+                                .orElseThrow(() -> new AppException(ErrorCode.ROLE_NOT_EXISTED))))
+                        .build();
 
-            userRepository.save(user);
+                userRepository.save(user);
+            }
         };
     }
 }
